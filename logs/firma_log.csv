@@ -1,0 +1,13 @@
+﻿Archivo;Fecha;Resultado;Certificado;Mensaje
+prueba.xlsm;2025-05-10 10:35:09;Firmado;Cert2;OK
+prueba.xlsm;2025-05-11 10:53:03;Firmado;Cert1;OK
+prueba.xlsm;2025-05-11 10:54:31;Firmado;Cert1;OK
+confianza1.xlsm;2025-05-22 17:05:30;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.
+confianza1.xlsm;2025-05-22 17:05:44;Firmado;Cert2;OK
+subcarpeta\confianza2.xlsm;2025-05-26 15:29:39;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.
+subcarpeta\confianza2.xlsm;2025-05-26 15:30:58;Firmado;Cert2;OK
+confianza3.docm;2025-05-26 15:49:46;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.
+confianza3.docm;2025-05-26 15:50:00;Firmado;Cert2;OK
+confianza1.xlsm;2025-05-29 08:31:03;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.
+confianza1.xlsm;2025-05-29 08:31:23;Error;ALBERCA PEREZ JULIAN - 54348204D;SignTool Error: No certificates were found that met all the given criteria.
+confianza1.xlsm;2025-05-29 08:31:37;Firmado;Cert2;OK
