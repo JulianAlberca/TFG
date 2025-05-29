@@ -1,6 +1,5 @@
 ﻿Archivo;Fecha;Resultado;Certificado;Mensaje
-confianza1.xlsm;2025-05-29 09:56:17;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.
-confianza1.xlsm;2025-05-29 09:56:35;Error;Cert2;"Done Adding Additional Store
+confianza1.xlsm;2025-05-29 10:11:59;Error;Cert2;"Done Adding Additional Store
 
 Number of errors: 1
 

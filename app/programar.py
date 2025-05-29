@@ -31,7 +31,6 @@ def crear_tarea_programada(hora, script_path, frecuencia, cert):
         f'/ST {hora_formateada}'
     )
 
-    print(comando)
     try:
         resultado = subprocess.run(
             comando, shell=True, capture_output=True, text=True)

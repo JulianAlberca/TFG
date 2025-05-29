@@ -256,7 +256,7 @@ class FirmaApp:
         self.progress.pack(fill="x", pady=(5, 10))
         self.master.update_idletasks()
 
-        log_path = os.path.join(self.folder, "firma_log.csv")
+        log_path = os.path.join(config.logs_directory, "firma_log.csv")
         archivo_nuevo = not os.path.exists(log_path)
 
         with open(log_path, mode="a", newline="", encoding="utf-8-sig") as log_file:

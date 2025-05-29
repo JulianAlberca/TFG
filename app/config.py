@@ -15,7 +15,7 @@ def buscar_signtool():
         "10.0.18362.0"
     ]
 
-    arquitecturas = ["x64", "x86"]
+    arquitecturas = ["x86", "x64"]
 
     for base in posibles_rutas:
         for version in versiones:
@@ -46,7 +46,6 @@ python_exe = sys.executable
 
 # Ruta absoluta del ejecutable
 signtool_path = buscar_signtool()
-
 if not signtool_path:
     raise FileNotFoundError(
         "❌ No se encontró signtool.exe en el sistema.\n"
