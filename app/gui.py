@@ -258,6 +258,7 @@ class FirmaApp:
 
         log_path = os.path.join(config.logs_directory, "firma_log.csv")
         archivo_nuevo = not os.path.exists(log_path)
+        firmados_ok = 0  # Contador de archivos firmados correctamente
 
         with open(log_path, mode="a", newline="", encoding="utf-8-sig") as log_file:
             writer = csv.writer(log_file, delimiter=';',
@@ -284,6 +285,7 @@ class FirmaApp:
                     if ok:
                         estado = "Firmado"
                         mensaje = "OK"
+                        firmados_ok += 1
                     else:
                         estado = "Error"
                         mensaje = salida.strip()[
@@ -308,7 +310,7 @@ class FirmaApp:
         self.progress["value"] = 100
         self.progress.pack_forget()
         messagebox.showinfo("Proceso completado",
-                            f"Firma completada.\nLog guardado en:\n{log_path}")
+                            f"Firma completada: {firmados_ok} de {total} archivos firmados correctamente.\n\nLog guardado en:\n{log_path}")
         self.cargar_archivos()
 
     def toggle_seleccionar_todos(self):
