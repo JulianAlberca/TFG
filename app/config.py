@@ -1,5 +1,23 @@
+import subprocess
 import os
 import sys
+
+
+def obtener_ruta_signtool():
+    try:
+        resultado = subprocess.run(
+            ["powershell", "-Command",
+                "Get-Command signtool.exe -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source"],
+            capture_output=True,
+            text=True,
+            shell=True
+        )
+        ruta = resultado.stdout.strip()
+        if ruta and ruta.endswith("signtool.exe"):
+            return ruta
+    except Exception as e:
+        print(f"⚠️ Error al buscar signtool.exe: {e}")
+    return None
 
 
 def buscar_signtool():
@@ -45,7 +63,8 @@ python_exe = sys.executable
 
 
 # Ruta absoluta del ejecutable
-signtool_path = buscar_signtool()
+signtool_path = obtener_ruta_signtool()
+print(signtool_path)
 if not signtool_path:
     raise FileNotFoundError(
         "❌ No se encontró signtool.exe en el sistema.\n"
