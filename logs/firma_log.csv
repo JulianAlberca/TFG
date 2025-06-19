@@ -32,3 +32,13 @@ confianza3.docm;2025-05-29 10:55:31;Error;"""ALBERCA PEREZ";SignTool Error: No c
 confianza3.docm;2025-05-29 15:50:32;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.
 confianza3.docm;2025-05-29 15:50:40;Firmado;Cert2;OK
 confianza1.xlsm;2025-06-13 17:39:52;Firmado;Cert2;OK
+Euro League Fixtures R13 to R14  v1 - 26112024 1607.xlsm;2025-06-15 18:04:59;Firmado;Cert2;OK
+Euro League Fixtures RANGT TOURNAMENT to RFINAL FOUR 4  v1 - 13052025 1352.xlsm;2025-06-15 18:19:40;Firmado;Cert2;OK
+Euro League Fixtures RANGT TOURNAMENT to RFINAL FOUR 4  v1 - 13052025 1352.xlsm;2025-06-16 10:05:50;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.
+Euro League Fixtures RANGT TOURNAMENT to RFINAL FOUR 4  v1 - 13052025 1352.xlsm;2025-06-16 10:05:59;Firmado;Cert2;OK
+confianza3.docm;2025-06-16 15:49:19;Firmado;Cert2;OK
+Euro League Fixtures R13 to R14  v1 - 26112024 1607.xlsm;2025-06-16 15:49:20;Firmado;Cert2;OK
+Euro League Fixtures RANGT TOURNAMENT to RFINAL FOUR 4  v1 - 13052025 1352.xlsm;2025-06-16 15:49:20;Firmado;Cert2;OK
+subcarpeta\confianza2.xlsm;2025-06-16 15:49:20;Firmado;Cert2;OK
+subcarpeta\no_confianza.xlsm;2025-06-16 15:49:21;Firmado;Cert2;OK
+confianza3.docm;2025-06-16 15:57:53;Error;MacroCaduca;SignTool Error: No certificates were found that met all the given criteria.

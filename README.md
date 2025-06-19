@@ -26,6 +26,11 @@ pywin32
 tk
 pyautogui
 pywinauto
+hashlib
+zipfile
+olefile
+os
+tempfile
 ```
 
 ---
@@ -44,18 +49,28 @@ Durante la instalación, **asegúrate de marcar la opción**:
 
 ### 2. Registrar las DLLs necesarias para firmar macros VBA
 
-Abre una terminal de administrador (cmd o PowerShell) y ejecuta:
+Descargar desde: 
+👉 https://www.microsoft.com/en-us/download/details.aspx?id=56617
+
+Abre una terminal de comandos como Administrador y ejecuta:
 
 ```cmd
-regsvr32 "C:\Program Files (x86)\Microsoft SDKs\ClickOnce\SignTool\msosip.dll"
-regsvr32 "C:\Program Files (x86)\Microsoft SDKs\ClickOnce\SignTool\msosipx.dll"
+regsvr32 "C:\Ruta\A\Las\DLLs\msosip.dll"
+regsvr32 "C:\Ruta\A\Las\DLLs\msosipx.dll"
 ```
 
-> ⚠️ Ajusta las rutas si tus DLLs están en otra ubicación.
+> ⚠️ Ajusta a las rutas correspondientes a las DLLs.
 
 ---
+### 3. Descargar Microsoft Visual C++ Redistributable Installer
+Es necesaria esta instalación ya que varias herramientas hacen uso de estas bibliotecas.
 
-### 3. Verificar que `signtool.exe` está disponible
+👉 https://download.microsoft.com/download/C/6/D/C6D0FD4E-9E53-4897-9B91-836EBA2AACD3/vcredist_x86.exe
+
+Ejecuta el instalador y acepta los términos.
+
+---
+### 4. Verificar que `signtool.exe` está disponible
 
 La herramienta lo buscará automáticamente en rutas estándar del SDK. Si quieres comprobarlo manualmente:
 
@@ -68,6 +83,8 @@ Si no aparece, puedes buscarlo manualmente en una ruta como:
 ```
 C:\Program Files (x86)\Windows Kits\10\bin\<versión>\x64\signtool.exe
 ```
+
+Las DLLs se pueden comprobar manualmente en el 'Editor de de registro' de Windows.
 
 ---
 
@@ -117,15 +134,6 @@ Get-ChildItem -Path Cert:\CurrentUser\My
 
 ---
 
-## 🧪 Verificar firmas
-
-El sistema permite comprobar automáticamente:
-- Si el documento está firmado.
-- Fecha de firma.
-- Fecha de expiración del certificado.
-- Nombre del firmante.
-
----
 
 ## 📋 Whitelist (Macros de confianza)
 
@@ -134,23 +142,3 @@ Puedes añadir macros a la whitelist desde la interfaz.
 
 ---
 
-## 🛠 Estructura del proyecto
-
-```
-TFG/
-├── app/
-│   ├── main.py
-│   ├── gui.py
-│   ├── signer.py
-│   ├── verify.py
-│   ├── whitelist.py
-│   └── ...
-├── documentos/
-│   └── (Archivos Office con macros)
-├── logs/
-│   └── firma_log.csv (log para las firmas manuales)
-│   └── (Logs generados por el script programado)
-├── passsword.hash
-├── requirements.txt
-└── README.md
-```

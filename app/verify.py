@@ -4,9 +4,6 @@ from datetime import datetime
 
 
 def verificar_firma(signtool_path, archivo):
-    import subprocess
-    import re
-    from datetime import datetime
 
     comando = [signtool_path, "verify", "/pa", "/v", archivo]
     resultado = subprocess.run(comando, capture_output=True, text=True)

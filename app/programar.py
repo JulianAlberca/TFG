@@ -1,4 +1,3 @@
-import os
 import subprocess
 import sys
 from tkinter import messagebox

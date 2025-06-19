@@ -2,3 +2,8 @@ pywin32
 tk
 pyautogui
 pywinauto
+hashlib
+zipfile
+olefile
+os
+tempfile
